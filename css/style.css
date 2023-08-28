@@ -6571,7 +6571,7 @@ html.w-mod-js [data-ix="text-0-2"] {
     width: 16vw;
   }
   .photo-album {
-    padding: 0 !important;
+    padding: 0.5rem !important;
   }
   .pr-client {
     font-size: 10vw;
