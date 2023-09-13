@@ -7564,7 +7564,9 @@ html.w-mod-js [data-ix="text-0-2"] {
     row-gap: 3rem;
   }
   .social-one-inf {
-    left: 30px;
+    left: 40px;
+    top: 4px;
+    word-break: break-word;
   }
   .social-two a:last-child {
     grid-column: auto / span 2;
