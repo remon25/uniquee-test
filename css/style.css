@@ -1,10 +1,18 @@
 @font-face {
   font-family: "Kufi";
-  src: url("./fonts/ElMessiri-Regular.ttf");
+  src: url("./fonts/ElMessiri-Regular.woff2") format("woff2"),
+    url("./fonts/ElMessiri-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Droid";
-  src: url("./fonts/DroidKufi-Regular.woff2");
+  src: url("./fonts/DroidArabicKufi.woff2") format("woff2"),
+    url("./fonts/DroidArabicKufi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 html {
   font-family: sans-serif;
@@ -2239,14 +2247,13 @@ h5 {
 }
 .contact__content {
   position: relative;
-  top: 50px;
 }
 
 .contact__form {
   display: grid;
   position: relative;
   width: 400px;
-  row-gap: 1.3rem;
+  row-gap: 1rem;
 }
 
 .contact__title {
@@ -2254,6 +2261,7 @@ h5 {
   font-family: "Kufi";
   font-weight: bold;
   color: #0c2c37;
+  margin-top: 110px;
 }
 
 .contact__form-div {
@@ -2687,7 +2695,7 @@ h5 {
 .img {
   width: 100%;
   height: 100%;
-  background-image: url("../profile.webp");
+  background-image: url("../assets/profile.webp");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5225,7 +5233,7 @@ html.w-mod-js [data-ix="text-0-2"] {
     grid-template-rows: auto auto;
   }
   .m-head {
-    font-size: 19vh;
+    font-size: 8vw;
     line-height: 18vh;
   }
   .menu-li.menulink {
@@ -5439,6 +5447,9 @@ html.w-mod-js [data-ix="text-0-2"] {
   }
 }
 @media screen and (max-width: 991px) {
+  .social-one-inf {
+    bottom: 10px !important;
+  }
   .load.hometoggler {
     display: none;
   }
@@ -7296,11 +7307,11 @@ html.w-mod-js [data-ix="text-0-2"] {
   filter: grayscale(0);
   transform: scale(1.08);
 }
-.line-between{
+.line-between {
   position: relative;
   width: 100%;
 }
-.line-between div{
+.line-between div {
   position: absolute;
   left: -5rem;
   top: 0;
@@ -7308,7 +7319,6 @@ html.w-mod-js [data-ix="text-0-2"] {
   height: 1px;
   background-color: #0c2c37;
   transition: 1s all ease;
-
 }
 
 .photo-row {
@@ -7318,33 +7328,30 @@ html.w-mod-js [data-ix="text-0-2"] {
 }
 .photo-row.grid {
   width: 100%;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-  "a b"
-  "a c"
-  "d c";
+    "a b"
+    "a c"
+    "d c";
   gap: 2rem;
 }
-.photo-row > div{
+.photo-row > div {
   overflow: hidden;
   border-radius: 15px;
-
 }
-.photo-row.grid img,.photo-row.grid_two img{
-  width:100% ;
+.photo-row.grid img,
+.photo-row.grid_two img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-
 .photo-row.grid_two {
   grid-template-areas: "a a" "b c";
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
-
 }
 
 .more {
@@ -7688,7 +7695,7 @@ html.w-mod-js [data-ix="text-0-2"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../pattern.JPG");
+  background-image: url("../assets/pattern.JPG");
   background-size: cover;
   opacity: 0;
   transition: 0.2s all ease-in;
@@ -7888,6 +7895,25 @@ html.w-mod-js [data-ix="text-0-2"] {
     transform: translate(-70%, -82%) !important;
   }
 }
+@media screen and (min-width: 1500px) {
+  .svg-container {
+    transform: translate(-85%, -50%) !important;
+  }
+  .menu-as{
+    height: 70px;
+  }
+  .contact__form-input::placeholder {
+
+    font-size: 1vw;
+  }
+  .contact__form-input{
+    padding: 2.5rem;
+  }
+  .contact__form{
+    row-gap: 3rem;
+  }
+
+}
 
 /* custom cursor */
 .mycursor {
@@ -7897,7 +7923,7 @@ html.w-mod-js [data-ix="text-0-2"] {
   left: 0;
   width: 100px;
   height: 100px;
-  background-image: url("../logo\ -\ cursor.svg");
+  background-image: url("../assets/logo\ -\ cursor.svg");
   mix-blend-mode: exclusion;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0.35);
